@@ -1,0 +1,26 @@
+
+# Raw and processed healthcare datasets
+data/raw/*
+data/processed/*
+
+# Keep folders in repository
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Temporary Power BI files
+~$*.pbix
