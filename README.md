@@ -1,7 +1,17 @@
 
 # Healthcare Operations & Patient Outcomes Intelligence
 
-An end-to-end healthcare analytics portfolio project using Python, Microsoft SQL Server, and Power BI to explore healthcare service utilization, patient characteristics, operational workload, and synthetic healthcare costs.
+An end-to-end healthcare analytics project using **Python, SQL Server, Power BI, DAX, and Git/GitHub** to analyze **129,513 synthetic healthcare encounters across 2,274 patients**.
+
+The project examines patient demand, service utilization, operational workload, encounter patterns, procedures, patient demographics, and synthetic healthcare costs to demonstrate how healthcare data can support operational and resource-planning decisions.
+
+> **Data Disclaimer:** This project uses synthetic healthcare data generated with Synthea. It does not contain real patient, provider, hospital, or financial data.
+
+## Business Problem
+
+Hospital management requires a consolidated view of patient demand, service utilization, patient patterns, operational workload, and healthcare costs to support informed capacity and resource-planning decisions.
+
+This project develops an end-to-end analytics solution that transforms raw synthetic healthcare data into structured analytical datasets, SQL-based insights, and an interactive Power BI dashboard.
 
 ## Project Overview
 
@@ -121,6 +131,8 @@ Provides high-level KPIs and trends including:
 - annual encounter trends;
 - encounter volume by service type and day of week.
 
+![Executive Overview](Images/dashboard_executive_overview.png)
+
 ### 2. Patient & Service Utilization
 Explores:
 
@@ -129,6 +141,8 @@ Explores:
 - frequently recorded conditions and findings;
 - frequently performed procedures;
 - age and gender filtering.
+
+![Patient and Service Utilization](Images/dashboard_patient_service_utilization.png)
 
 ### 3. Operations & Cost
 Examines:
@@ -139,6 +153,28 @@ Examines:
 - organizations with high encounter volumes;
 - claim cost by service type;
 - procedures with high aggregate base costs.
+
+![Operations and Cost](Images/dashboard_operations_cost.png)
+
+### Operational Recommendations
+
+Based on the patterns identified in this synthetic healthcare dataset, the following considerations could support operational decision-making in a comparable real-world healthcare setting:
+
+- **Align capacity planning with service demand:** Ambulatory care accounted for the largest encounter volume (71,677 encounters). In a real healthcare environment, consistently high-volume services could be prioritized when reviewing staffing, appointment scheduling, and facility capacity.
+
+- **Evaluate day-of-week demand patterns:** Wednesday recorded the highest encounter volume (20,416 encounters). Monitoring whether similar patterns persist over time could help healthcare organizations align staffing and scheduling with periods of higher service demand.
+
+- **Monitor high-utilization patient groups:** The difference between the mean (56.95) and median (36) encounters per patient indicates a strongly right-skewed utilization pattern. Segmenting high-utilization patients could help organizations better understand repeated service use and support care-coordination planning.
+
+- **Incorporate age-related utilization into resource planning:** Patients aged 45–59 generated the highest encounter (32,047) and procedure (89,031) volumes. Where similar patterns occur in real-world data, demographic utilization profiles could contribute to service-demand forecasting.
+
+- **Account for recurring treatment workload:** Renal dialysis occurred 20,503 times among only 65 represented patients, demonstrating how recurring treatment pathways can generate substantial operational workload even when relatively few patients are involved.
+
+- **Use median alongside mean service duration:** Highly skewed encounter durations show that averages alone may overstate the duration of a typical encounter. Including median duration in operational dashboards can provide a more representative view of typical service time.
+
+- **Evaluate service volume and cost together:** Ambulatory care generated the largest aggregate claim cost because of its high volume, while inpatient encounters had substantially higher average costs per encounter. Monitoring both volume and unit-level cost can provide a more balanced view of operational and financial activity.
+
+> **Note:** These recommendations are analytical interpretations of synthetic Synthea data and are intended to demonstrate how healthcare analytics can support operational decision-making. They are not clinical recommendations or conclusions about a real healthcare organization.
 
 ## Analytical Considerations
 
